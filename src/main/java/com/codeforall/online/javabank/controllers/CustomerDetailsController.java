@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class CustomerDetailsController extends HttpServlet {
 
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TheOneWhoKnowsAllCustomers theOneWhoKnowsAllCustomers = TheOneWhoKnowsAllCustomers.getInstance();
