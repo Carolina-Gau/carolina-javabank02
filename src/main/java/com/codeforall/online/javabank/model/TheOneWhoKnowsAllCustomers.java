@@ -15,6 +15,7 @@ public class TheOneWhoKnowsAllCustomers {
         createCustomer();
     }
 
+
     private void createCustomer() {
         Customer João = new Customer();
         João.setId(1);

@@ -7,6 +7,7 @@
     <head>
         <title>Bank App</title>
     </head>
+
     <body>
         <h6><%= customer.getFirstName()</h6>
         <h6><%= customer.getLastPhone()</h6>
