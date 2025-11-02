@@ -13,6 +13,7 @@ public class TheOneWhoKnowsAllCustomers {
     private TheOneWhoKnowsAllCustomers() {
         customers = HashMap.newHashMap();
         createCustomer();
+
     }
 
     private void createCustomer() {

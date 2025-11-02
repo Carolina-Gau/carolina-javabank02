@@ -6,9 +6,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import java.io.IOException;
 
 public class ListController extends HttpServlet {
