@@ -8,6 +8,10 @@ package com.codeforall.online.javabank.domain.account;
 public class CheckingAccount extends AbstractAccount {
 
 
+    public CheckingAccount(String s, double v) {
+        super();
+    }
+
     /**
      * @see Account#getAccountType()
      */

@@ -13,6 +13,10 @@ public class SavingsAccount extends AbstractAccount {
      */
     public static final double MIN_BALANCE = 100;
 
+    public SavingsAccount(String s, double v) {
+        super();
+    }
+
     /**
      * @see Account#getAccountType()
      */

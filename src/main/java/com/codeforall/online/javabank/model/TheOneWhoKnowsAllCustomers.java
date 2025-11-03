@@ -1,8 +1,11 @@
 package com.codeforall.online.javabank.model;
 
 import com.codeforall.online.javabank.domain.Customer;
+import com.codeforall.online.javabank.domain.account.CheckingAccount;
+import com.codeforall.online.javabank.domain.account.SavingsAccount;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TheOneWhoKnowsAllCustomers {
@@ -11,11 +14,10 @@ public class TheOneWhoKnowsAllCustomers {
     private static TheOneWhoKnowsAllCustomers INSTANCE;
 
     private TheOneWhoKnowsAllCustomers() {
-        customers = HashMap.newHashMap();
+        customers = new HashMap<>();
         createCustomer();
 
     }
-
 
     private void createCustomer() {
         Customer João = new Customer();
@@ -25,7 +27,10 @@ public class TheOneWhoKnowsAllCustomers {
         João.setPhone("911555666");
         João.setEmail("oliveira@gmail.com");
         João.getTotalBalance();
-        João.setAccounts();
+        João.setAccounts(List.of(
+                new CheckingAccount("PT50-0000-1111", 300.0),
+                new SavingsAccount("PT50-1111-2222", 1000.0)
+        ));
 
         Customer Townsend = new Customer();
         Townsend.setId(1);
@@ -34,16 +39,18 @@ public class TheOneWhoKnowsAllCustomers {
         Townsend.setPhone("919191919");
         Townsend.setEmail("townsend@gmail.com");
         Townsend.getTotalBalance();
-        Townsend.setAccounts();
+        Townsend.setAccounts(List.of(
+                new CheckingAccount("PT50-2222-3333", 250.0)
+        ));
 
         Customer Sara = new Customer();
         Sara.setId(1);
         Sara.setFirstName("João");
         Sara.setLastName("Oliveira");
         Sara.setPhone("912288999");
-        Sara.setEmail("SAra@gmail.com");
+        Sara.setEmail("Sara@gmail.com");
         Sara.getTotalBalance();
-        Sara.setAccounts();
+        Sara.setAccounts(List.of());
     }
 
     public Customer getCustomerId(Integer id) {
